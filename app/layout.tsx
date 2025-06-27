@@ -30,14 +30,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${notoSansKR.className} antialiased w-full overflow-x-hidden bg-bg-default`}
+        className={`${notoSansKR.className} antialiased w-full overflow-x-hidden bg-darkOnly-bg `}
       >
-        <div className="px-4 py-4 lg:px-[100px] lg:py-[80px]">
-          <div className="lg:flex lg:items-start overflow-hidden">
-            <AsideButtons path="/" />
-            {children}
-          </div>
-        </div>
+        {children}
       </body>
     </html>
   );

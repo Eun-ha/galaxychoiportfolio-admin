@@ -1,65 +1,13 @@
 import type { Config } from "tailwindcss";
 
-export default {
+const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{ts,tsx}",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        subbackground: "var(--sub-background)",
-        subfontcolor: "var(--sub-font-color)",
-        text: {
-          default: "var(--text-default)",
-          emphasis: "var(--text-emphasis)",
-        },
-        bg: {
-          default: "var(--bg-default)",
-          hover: "var(--bg-hover)",
-          active: "var(--bg-active)",
-          emphasis: "var(--bg-emphasis)",
-        },
-        border: "var(--border)",
-        point: {
-          red: "#f85149",
-          blue: "#4493f8",
-          green: "#3fb950",
-          orange: "#ffa657",
-          violet: "#7928CA",
-          cyan: "#50E3C2",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        chart: {
-          "1": "hsl(var(--chart-1))",
-          "2": "hsl(var(--chart-2))",
-          "3": "hsl(var(--chart-3))",
-          "4": "hsl(var(--chart-4))",
-          "5": "hsl(var(--chart-5))",
-        },
-        darkOnly: {
-          text: "rgb(240, 246, 252)",
-          subtext: "rgb(145, 152, 161)",
-          bg: "rgb(13, 17, 23)",
-          hover: "rgba(101, 108, 118, 0.2)",
-          active: "rgba(101, 108, 118, 0.1)",
-          emphasis: "rgb(1, 4, 9)",
-          border: "rgb(61, 68, 77)",
-        },
-      },
-      fontSize: {
-        sm: "12px",
-        default: "14px",
-        lg: "24px",
-        xl: "36px",
-      },
-
       keyframes: ({ theme }) => ({
         rerender: {
           "0%": {
@@ -116,4 +64,6 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+};
+
+export default config;

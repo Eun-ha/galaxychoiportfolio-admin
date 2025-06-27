@@ -1,6 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-subbackground: var(--sub-background);
+  --color-subfontcolor: var(--sub-font-color);
+
+  --color-text-default: var(--text-default);
+  --color-text-emphasis: var(--text-emphasis);
+
+  --color-bg-default: var(--bg-default);
+  --color-bg-hover: var(--bg-hover);
+  --color-bg-active: var(--bg-active);
+  --color-bg-emphasis: var(--bg-emphasis);
+
+  --color-border: var(--border);
+
+  --color-point-red: #f85149;
+  --color-point-blue: #4493f8;
+  --color-point-green: #3fb950;
+  --color-point-orange: #ffa657;
+  --color-point-violet: #7928ca;
+  --color-point-cyan: #50e3c2;
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  --color-darkOnly-text: rgb(240, 246, 252);
+  --color-darkOnly-subtext: rgb(145, 152, 161);
+  --color-darkOnly-bg: rgb(13, 17, 23);
+  --color-darkOnly-hover: rgba(101, 108, 118, 0.2);
+  --color-darkOnly-active: rgba(101, 108, 118, 0.1);
+  --color-darkOnly-emphasis: rgb(1, 4, 9);
+  --color-darkOnly-border: rgb(61, 68, 77);
+
+  --font-size-sm: 12px;
+  --font-size-default: 14px;
+  --font-size-lg: 24px;
+  --font-size-xl: 36px;
+}
 
 :root {
   --muted: 0 0% 14.9%;
