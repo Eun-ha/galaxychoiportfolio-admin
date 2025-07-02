@@ -13,17 +13,18 @@ export async function AsideButtons(props: Props) {
       <AsideButtonList
         path={path}
         categories={[
+          ...(path === "/admin"
+            ? [
+                { button: "admin", slug: "/" },
+                { button: "main", slug: "main" },
+                { button: "skill", slug: "skill" },
+                { button: "work", slug: "work" },
+              ]
+            : []),
           ...asideButtons.map((x: Aside) => ({
             button: x.button,
             slug: x.slug,
           })),
-          ...(path === "/admin"
-            ? [
-                { button: "work", slug: "work" },
-                { button: "main", slug: "main" },
-                { button: "skill", slug: "skill" },
-              ]
-            : []),
         ]}
       />
     </>
