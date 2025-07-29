@@ -15,7 +15,7 @@ export async function AsideButtons(props: Props) {
         categories={[
           ...(path === "/admin"
             ? [
-                { button: "admin", slug: "/" },
+                { button: "admin", slug: "" },
                 { button: "main", slug: "main" },
                 { button: "skill", slug: "skill" },
                 { button: "work", slug: "work" },
