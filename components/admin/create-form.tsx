@@ -115,12 +115,12 @@ export default function CreateForm(props: Props) {
   };
 
   return (
-    <form action={formAction}>
+    <form action={formAction} className="w-full">
       <div className="w-full">
         <BoundaryFrom>
           {slug === "certificates" ? (
             <>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="name">name</label>
                 <input
                   type="text"
@@ -130,7 +130,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="date">date</label>
                 <input
                   type="text"
@@ -140,7 +140,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="authority">authority</label>
                 <input
                   type="text"
@@ -153,7 +153,7 @@ export default function CreateForm(props: Props) {
             </>
           ) : slug === "educations" ? (
             <>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="name">school</label>
                 <input
                   type="text"
@@ -163,7 +163,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="authority">degree</label>
                 <input
                   type="text"
@@ -173,7 +173,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="authority">institution</label>
                 <input
                   type="text"
@@ -183,7 +183,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="date">date</label>
                 <input
                   type="text"
@@ -196,7 +196,7 @@ export default function CreateForm(props: Props) {
             </>
           ) : slug === "experiences" ? (
             <>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="company">company</label>
                 <input
                   type="text"
@@ -206,7 +206,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="title">title</label>
                 <input
                   type="text"
@@ -216,7 +216,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="date">date</label>
                 <input
                   type="text"
@@ -226,7 +226,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="description">description</label>
                 <input
                   type="text"
@@ -239,7 +239,7 @@ export default function CreateForm(props: Props) {
             </>
           ) : slug === "descriptions" ? (
             <>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="title">title</label>
                 <input
                   type="text"
@@ -249,7 +249,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="date">date</label>
                 <input
                   type="text"
@@ -260,7 +260,7 @@ export default function CreateForm(props: Props) {
                 />
               </div>
 
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="performance">performance</label>
                 <input
                   type="text"
@@ -298,7 +298,7 @@ export default function CreateForm(props: Props) {
                   </div>
                 ))}
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="role">role</label>
                 <input
                   type="text"
@@ -308,7 +308,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="skills">skills</label>
                 <input
                   type="text"
@@ -321,7 +321,7 @@ export default function CreateForm(props: Props) {
             </>
           ) : slug === "work" ? (
             <>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="title">title</label>
                 <input
                   type="text"
@@ -331,7 +331,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="description">description</label>
                 <input
                   type="text"
@@ -341,7 +341,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="skill">skill</label>
                 <input
                   type="text"
@@ -351,7 +351,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="path">path</label>
                 <input
                   type="text"
@@ -361,7 +361,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="url">url</label>
                 <input
                   type="text"
@@ -371,7 +371,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="download">download</label>
                 <input
                   type="text"
@@ -380,11 +380,11 @@ export default function CreateForm(props: Props) {
                   placeholder="download"
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="git">git</label>
                 <input type="text" id="git" name="git" placeholder="git" />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="index">index</label>
                 <input
                   type="text"
@@ -396,7 +396,7 @@ export default function CreateForm(props: Props) {
             </>
           ) : slug === "main" ? (
             <>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="title">title</label>
                 <input
                   type="text"
@@ -406,7 +406,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="content1">content1</label>
                 <input
                   type="text"
@@ -416,7 +416,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="content2">content2</label>
                 <input
                   type="text"
@@ -426,7 +426,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="description">description</label>
                 <input
                   type="text"
@@ -436,7 +436,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="description2">description2</label>
                 <input
                   type="text"
@@ -446,7 +446,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="description3">description3</label>
                 <input
                   type="text"
@@ -456,7 +456,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="button">button</label>
                 <input
                   type="text"
@@ -466,7 +466,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="path">path</label>
                 <input
                   type="text"
@@ -476,18 +476,18 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="alt">alt</label>
                 <input type="text" id="alt" name="alt" placeholder="alt" />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="url">url</label>
                 <input type="text" id="url" name="url" placeholder="url" />
               </div>
             </>
           ) : slug === "skill" ? (
             <>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="name">name</label>
                 <input
                   type="text"
@@ -497,7 +497,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="color">color</label>
                 <input
                   type="text"
@@ -507,7 +507,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="skills">skills</label>
                 <input
                   type="text"
@@ -517,7 +517,7 @@ export default function CreateForm(props: Props) {
                   required
                 />
               </div>
-              <div className="w-full flex mb-3">
+              <div className="w-full flex items-center mb-3">
                 <label htmlFor="angle">angle</label>
                 <input
                   type="text"
