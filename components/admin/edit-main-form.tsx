@@ -46,7 +46,7 @@ export default function EditMainForm({
   }, [actionState]);
 
   return (
-    <form action={formAction}>
+    <form action={formAction} className="w-full">
       <div className="w-full">
         <BoundaryFrom>
           <>
