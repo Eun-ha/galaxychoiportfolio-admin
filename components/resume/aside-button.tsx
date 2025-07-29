@@ -29,6 +29,7 @@ export const AsideButton = ({
         }
       )}
       aria-label={`Link to ${category.slug}`}
+      scroll={false}
     >
       <span
         className={clsx({
