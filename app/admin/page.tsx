@@ -19,7 +19,7 @@ export default async function Home() {
   console.log("User data:", user);
 
   return (
-    <main className="flex flex-col gap-8 py-8 px-2 md:px-0">
+    <main className="flex flex-col w-fullgap-8 md:px-0">
       <Card className="w-full max-w-2xl mx-auto bg-card text-card-foreground border border-border shadow-lg">
         <CardHeader>
           <CardTitle className="text-2xl">사용자 계정</CardTitle>
