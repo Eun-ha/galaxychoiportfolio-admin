@@ -13,71 +13,39 @@ export const AdminMain = (props: Props) => {
   const { slug, data } = props;
 
   return (
-    <>
-      <table className="min-w-full">
-        <thead>
+    <div className="w-full overflow-x-scroll rounded-lg border border-border bg-card shadow-md">
+      <table className="min-w-full text-sm">
+        <thead className="sticky top-0 z-10 bg-darkOnly-bg text-darkOnly-text">
           <tr>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              ID
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              title
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              content1
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              content2
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              description
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              description2
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              description3
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              button
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              path
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              alt
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              url
-            </th>
-            <th className="px-6 py-3 text-left text-xs leading-4 font-medium text-gray-600 uppercase tracking-wider">
-              버튼
-            </th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">ID</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">title</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">content1</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">content2</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">description</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">description2</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">description3</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">button</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">path</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">alt</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">url</th>
+            <th className="px-4 py-2 text-left font-semibold whitespace-nowrap">버튼</th>
           </tr>
         </thead>
-        <tbody className="divide-y">
+        <tbody>
           {data.map((data, id) => (
-            <tr key={id}>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.id}</td>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.title}</td>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.content1}</td>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.content2}</td>
-
-              <td className="px-6 py-4 whitespace-no-wrap">
-                {data.description}
-              </td>
-              <td className="px-6 py-4 whitespace-no-wrap">
-                {data.description2}
-              </td>
-              <td className="px-6 py-4 whitespace-no-wrap">
-                {data.description3}
-              </td>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.button}</td>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.path}</td>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.alt}</td>
-              <td className="px-6 py-4 whitespace-no-wrap">{data.url}</td>
-
-              <td>
+            <tr key={id} className={id % 2 === 0 ? "bg-darkOnly-active" : "bg-transparent"}>
+              <td className="px-4 py-2 whitespace-nowrap">{data.id}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.title}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.content1}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.content2}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.description}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.description2}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.description3}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.button}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.path}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.alt}</td>
+              <td className="px-4 py-2 whitespace-nowrap">{data.url}</td>
+              <td className="px-4 py-2 whitespace-nowrap">
                 <BoundaryButton>
                   {data.id && <EditData slug={slug} id={data.id} />}
                   {data.id && <DeleteData slug={slug} id={data.id} />}
@@ -87,6 +55,6 @@ export const AdminMain = (props: Props) => {
           ))}
         </tbody>
       </table>
-    </>
+    </div>
   );
 };
